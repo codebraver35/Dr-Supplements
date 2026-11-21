@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dr Supplements</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="brand-right">Dr Supplements</div>
+
+  <div class="header-right">
+    <div class="search-wrap" id="search-wrap">
+      <button class="search-icon-btn" id="search-toggle" aria-label="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off" class="search-input">
+      <div id="search-dropdown"></div>
+    </div>
+
+    <div class="cart-icon" id="cart-btn">
+      🛒 <span id="cart-count">0</span>
+    </div>
+
+    <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="nav-left" id="nav-menu">
+  <a href="#">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- Mobile search bar (expands below header) -->
+<div class="mobile-search-bar" id="mobile-search-bar">
+  <input type="text" id="searchInputMobile" placeholder="Search products..." autocomplete="off">
+  <div id="search-dropdown-mobile"></div>
+</div>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Fuel Your <span>Performance</span></h1>
+      <p>Elite supplements for serious athletes</p>
+      <a href="#categories" class="btn">Shop Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY TITLE -->
+<section class="section-title reveal" id="categories">
+  <h2>Shop By Category</h2>
+  <p>Premium supplements from trusted global brands</p>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories reveal">
+  <div class="category-card"><h2 class="category-title">Whey</h2><a href="whey-concentrate.html" class="btn">Explore</a></div>
+  <div class="category-card"><h2 class="category-title">Whey Isolate</h2><a href="whey-isolate.html" class="btn">Explore</a></div>
+  <div class="category-card"><h2 class="category-title">Gainers</h2><a href="gainers.html" class="btn">Explore</a></div>
+  <div class="category-card"><h2 class="category-title">Creatine</h2><a href="creatine.html" class="btn">Explore</a></div>
+  <div class="category-card"><h2 class="category-title">General Health</h2><a href="vitamins.html" class="btn">Explore</a></div>
+  <div class="category-card"><h2 class="category-title">Pre Workout</h2><a href="preworkout.html" class="btn">Explore</a></div>
+  <div class="category-card"><h2 class="category-title">Testoboosters</h2><a href="testoboosters.html" class="btn">Explore</a></div>
+  <div class="category-card"><h2 class="category-title">Amino Acids</h2><a href="amino.html" class="btn">Explore</a></div>
+  <div class="category-card"><h2 class="category-title">Fat Burners</h2><a href="fatburners.html" class="btn">Explore</a></div>
+  <div class="category-card"><h2 class="category-title">Offers</h2><a href="offers.html" class="btn">Explore</a></div>
+  <div class="category-card"><h2 class="category-title">Carbs</h2><a href="carbs.html" class="btn">Explore</a></div>
+</section>
+
+<!-- ABOUT -->
+<section class="about reveal" id="about">
+  <div class="about-container">
+    <div class="about-image-wrap">
+      <img src="images/founder.jpg" alt="Founder">
+      <div class="about-badge">Est. 2019</div>
+    </div>
+    <div class="about-text">
+      <span class="about-label">Our Story</span>
+      <h2>Built by Athletes.<br>For Athletes.</h2>
+      <p>What started in a gym bag turned into Lebanon's most trusted supplement destination. We source only 100% authentic products from the world's top brands — no counterfeits, no compromises.</p>
+      <p>Whether you're chasing your first PR or stepping on stage, we're the team behind your team.</p>
+      <div class="about-pills">
+        <span class="pill">✔ 100% Authentic</span>
+        <span class="pill">✔ Fast Delivery</span>
+        <span class="pill">✔ Expert Advice</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="contact reveal" id="contact">
+  <div class="contact-box">
+    <h2>Get In Touch</h2>
+    <p>Questions, orders, or support — we're here for you.</p>
+    <div class="contact-buttons">
+      <a href="https://wa.me/96171236230" target="_blank" class="btn whatsapp-btn">💬 WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/96171236230" class="whatsapp" target="_blank">💬</a>
+
+<!-- CART PANEL -->
+<div class="cart-panel" id="cart-panel">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <span id="close-cart">✖</span>
+  </div>
+  <div id="cart-items"></div>
+<div class="cart-footer">
+    <h3>Subtotal: $<span id="cart-total">0</span></h3>
+
+    <div style="display:flex;gap:8px;margin:12px 0;">
+        <input id="promo-input" type="text" placeholder="Promo code..." 
+            style="flex:1;padding:9px 12px;border-radius:8px;border:1px solid #444;background:#222;color:white;font-family:'Montserrat',sans-serif;font-size:13px;outline:none;">
+        <button onclick="applyPromo()" 
+            style="padding:9px 16px;background:#0A84FF;color:white;border:none;border-radius:8px;font-family:'Montserrat',sans-serif;font-weight:700;cursor:pointer;font-size:13px;">Apply</button>
+    </div>
+
+    <div id="promo-message" style="font-size:12px;margin-bottom:8px;"></div>
+    <h3 id="discounted-total-row" style="display:none;color:#0A84FF;">After Discount: $<span id="discounted-total">0</span></h3>
+
+    <button class="btn" onclick="checkoutWhatsApp()">Checkout</button>
+</div>
+</div>
+
+<script>
+// Reveal animation
+const reveals = document.querySelectorAll('.reveal');
+function revealOnScroll() {
+  reveals.forEach(reveal => {
+    if (reveal.getBoundingClientRect().top < window.innerHeight - 100)
+      reveal.classList.add("active");
+  });
+}
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
+// Scroll header
+window.addEventListener("scroll", () => {
+  document.querySelector("header").classList.toggle("scrolled", window.scrollY > 50);
+});
+
+// Counter animation
+document.querySelectorAll('.counter').forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const inc = target / 200;
+    if (count < target) {
+      counter.innerText = Math.ceil(count + inc);
+      setTimeout(updateCount, 10);
+    } else {
+      counter.innerText = target + "+";
+    }
+  };
+  updateCount();
+});
+
+// Cart panel open/close
+document.getElementById("cart-btn").addEventListener("click", () => {
+  document.getElementById("cart-panel").classList.add("active");
+});
+document.getElementById("close-cart").addEventListener("click", () => {
+  document.getElementById("cart-panel").classList.remove("active");
+});
+
+// Hamburger menu
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const navMenu = document.getElementById('nav-menu');
+
+hamburgerBtn.addEventListener('click', () => {
+  hamburgerBtn.classList.toggle('open');
+  navMenu.classList.toggle('open');
+});
+
+navMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburgerBtn.classList.remove('open');
+    navMenu.classList.remove('open');
+  });
+});
+
+// Mobile search toggle
+const searchToggle = document.getElementById('search-toggle');
+const mobileSearchBar = document.getElementById('mobile-search-bar');
+const searchInputMobile = document.getElementById('searchInputMobile');
+const searchDropdownMobile = document.getElementById('search-dropdown-mobile');
+
+searchToggle.addEventListener('click', () => {
+  mobileSearchBar.classList.toggle('open');
+  if (mobileSearchBar.classList.contains('open')) {
+    setTimeout(() => searchInputMobile.focus(), 100);
+  } else {
+    searchDropdownMobile.innerHTML = '';
+    searchDropdownMobile.style.display = 'none';
+  }
+});
+</script>
+
+<script src="products.js"></script>
+<script>
+function normalizeSearch(value) {
+  return value.toLowerCase().normalize("NFKD").replace(/[^a-z0-9]/g, "");
+}
+
+function bindProductSearch(input, dropdown) {
+  function renderResults() {
+    const query = normalizeSearch(input.value);
+    dropdown.replaceChildren();
+    dropdown.style.display = query ? "block" : "none";
+    if (!query) return;
+
+    const matches = allProducts.filter(product =>
+      normalizeSearch(product.name).includes(query) ||
+      normalizeSearch(product.category).includes(query)
+    );
+    if (!matches.length) {
+      const empty = document.createElement("div");
+      empty.className = "product-search-empty";
+      empty.textContent = "No products found";
+      dropdown.append(empty);
+      return;
+    }
+
+    for (const product of matches) {
+      const link = document.createElement("a");
+      link.className = "product-search-result";
+      link.href = product.page;
+
+      const name = document.createElement("strong");
+      name.textContent = product.name;
+      const category = document.createElement("span");
+      category.textContent = product.category;
+      link.append(name, category);
+      dropdown.append(link);
+    }
+  }
+
+  input.addEventListener("input", renderResults);
+  input.addEventListener("focus", renderResults);
+  input.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      dropdown.style.display = "none";
+    }
+    if (event.key === "Enter" && dropdown.style.display === "block") {
+      dropdown.querySelector("a")?.click();
+    }
+  });
+  document.addEventListener("click", event => {
+    if (!input.contains(event.target) && !dropdown.contains(event.target)) {
+      dropdown.style.display = "none";
+    }
+  });
+}
+
+bindProductSearch(document.getElementById("searchInput"), document.getElementById("search-dropdown"));
+bindProductSearch(searchInputMobile, searchDropdownMobile);
+</script>
+
+<script src="cart.js"></script>
+
+</body>
+</html>
